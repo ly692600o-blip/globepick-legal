@@ -12,4 +12,3 @@
 
 - 隐私政策: https://ly692600o-blip.github.io/globepick-legal/privacy-policy.html
 - 服务条款: https://ly692600o-blip.github.io/globepick-legal/terms-of-service.html
-
