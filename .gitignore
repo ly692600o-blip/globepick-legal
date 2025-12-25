@@ -1,0 +1,5 @@
+# 忽略文档文件（只保留 HTML）
+*.md
+*.txt
+!README.md
+
