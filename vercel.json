@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/app/",
+      "destination": "https://globepick-backend-production.up.railway.app/app/"
+    },
+    {
       "source": "/app/:path*",
       "destination": "https://globepick-backend-production.up.railway.app/app/:path*"
     },
