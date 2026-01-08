@@ -1,0 +1,2 @@
+/app/* https://globepick-backend-production.up.railway.app/app/:splat 200
+/.well-known/apple-app-site-association https://globepick-backend-production.up.railway.app/.well-known/apple-app-site-association 200
