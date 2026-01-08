@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TM6Q9CNJPG.com.shiwuworld.globepick",
+        "paths": ["/app/*"]
+      }
+    ]
+  }
+}
