@@ -1,2 +1,2 @@
-/app/* https://globepick-backend-production.up.railway.app/app/:splat 200
-/app/ https://globepick-backend-production.up.railway.app/app/ 200
+/app/* https://api.globepick.cn/app/:splat 200
+/app/ https://api.globepick.cn/app/ 200
