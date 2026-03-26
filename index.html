@@ -160,11 +160,11 @@
             border-bottom: 1px solid rgba(0,0,0,0.04);
         }
         .trust-inner {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
-            gap: 48px;
+            gap: 32px 48px;
             flex-wrap: wrap;
         }
         .trust-item {
@@ -184,6 +184,139 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
+        }
+
+        /* Core Value - 0溢价 */
+        .core-value {
+            padding: 56px 24px;
+            background: linear-gradient(135deg, #FFF5F3 0%, #FEF0ED 50%, #FFF8F0 100%);
+            border-top: 3px solid var(--primary);
+        }
+        .core-value-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .core-value-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+        .core-value h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        .core-value h2 .highlight {
+            color: var(--primary);
+            position: relative;
+        }
+        .core-value h2 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: rgba(232,76,61,0.15);
+            border-radius: 4px;
+            z-index: -1;
+        }
+        .core-value > .core-value-inner > p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 640px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+        .core-compare {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 24px;
+            align-items: stretch;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .compare-card {
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: left;
+        }
+        .compare-old {
+            background: #F5F5F5;
+            border: 2px solid #E0E0E0;
+        }
+        .compare-new {
+            background: var(--white);
+            border: 2px solid var(--primary);
+            box-shadow: 0 8px 30px rgba(232,76,61,0.12);
+        }
+        .compare-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+        .compare-old .compare-label { color: #999; }
+        .compare-new .compare-label { color: var(--primary); }
+        .compare-list {
+            list-style: none;
+            padding: 0;
+        }
+        .compare-list li {
+            font-size: 14px;
+            padding: 6px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+        .compare-old .compare-list li { color: #888; }
+        .compare-new .compare-list li { color: var(--text); }
+        .compare-vs {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 800;
+            color: #CCC;
+        }
+        .core-receipt {
+            margin-top: 32px;
+            padding: 20px 28px;
+            background: var(--white);
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .core-receipt-icon {
+            font-size: 32px;
+        }
+        .core-receipt-text {
+            text-align: left;
+        }
+        .core-receipt-text strong {
+            display: block;
+            font-size: 15px;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .core-receipt-text span {
+            font-size: 13px;
+            color: var(--text-light);
         }
 
         /* Pain Points */
@@ -330,6 +463,79 @@
         .feature-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
         .feature-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
 
+        /* Dual Role Section */
+        .dual-role {
+            padding: 72px 24px;
+            background: linear-gradient(135deg, #FFF9F0 0%, #FFF5F3 50%, #F0F4FF 100%);
+            text-align: center;
+        }
+        .dual-role-inner { max-width: 900px; margin: 0 auto; }
+        .dual-role .section-tag { background: #FFF0E6; color: #E67E22; }
+        .dual-role h2 { font-size: 34px; font-weight: 800; margin-bottom: 16px; }
+        .dual-role > .dual-role-inner > p.dual-desc {
+            font-size: 17px;
+            color: var(--text-light);
+            max-width: 580px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+        .dual-cards {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 24px;
+            align-items: stretch;
+            max-width: 780px;
+            margin: 0 auto 32px;
+        }
+        .dual-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+        .dual-card:hover { transform: translateY(-4px); }
+        .dual-card-icon { font-size: 48px; margin-bottom: 16px; }
+        .dual-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .dual-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+        .dual-card .dual-tag {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 4px 14px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .dual-card-buy .dual-tag { background: #EBF5FB; color: #2E86C1; }
+        .dual-card-earn .dual-tag { background: #E8F8F5; color: #27AE60; }
+        .dual-switch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--primary);
+        }
+        .dual-bottom {
+            background: var(--white);
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .dual-bottom p {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .dual-bottom p span { color: var(--primary); }
+        .dual-bottom small {
+            display: block;
+            margin-top: 6px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
         /* Safety */
         .safety-section {
             padding: 80px 24px;
@@ -458,25 +664,158 @@
         .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
         .footer-bottom a:hover { color: rgba(255,255,255,0.8); }
 
-        /* Responsive */
+        /* Responsive - Tablet */
         @media (max-width: 768px) {
-            .hero { padding: 120px 20px 60px; }
-            .hero h1 { font-size: 32px; }
-            .hero .subtitle { font-size: 16px; }
+            /* Nav */
+            .nav-inner { padding: 12px 16px; }
+            .nav-logo { font-size: 18px; }
             .nav-links a:not(.nav-download) { display: none; }
-            .pain-grid { grid-template-columns: 1fr; }
-            .steps { flex-direction: column; }
+            .nav-download { padding: 6px 16px; font-size: 14px !important; }
+
+            /* Hero */
+            .hero { padding: 90px 20px 40px; }
+            .hero-badge { font-size: 13px; padding: 5px 14px; margin-bottom: 16px; }
+            .hero h1 { font-size: 32px; letter-spacing: 0; margin-bottom: 14px; }
+            .hero .subtitle { font-size: 15px; padding: 0 12px; margin: 0 auto 28px; }
+            .btn-primary { padding: 14px 28px; font-size: 16px; }
+            .btn-secondary { padding: 14px 28px; font-size: 16px; }
+
+            /* Trust Bar */
+            .trust-bar { padding: 20px 16px; }
+            .trust-inner {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px 10px;
+                max-width: 360px;
+            }
+            .trust-item { font-size: 12px; gap: 6px; }
+            .trust-icon { width: 28px; height: 28px; min-width: 28px; font-size: 14px; border-radius: 8px; }
+
+            /* Core Value */
+            .core-value { padding: 36px 20px; }
+            .core-value h2 { font-size: 24px; margin-bottom: 12px; }
+            .core-value > .core-value-inner > p { font-size: 14px; margin-bottom: 24px; line-height: 1.7; }
+            .core-compare {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .compare-vs { justify-content: center; font-size: 16px; padding: 4px 0; }
+            .compare-card { padding: 20px 18px; }
+            .compare-list li { font-size: 13px; }
+            .core-receipt { flex-direction: column; text-align: center; padding: 16px 20px; gap: 8px; }
+            .core-receipt-text { text-align: center; }
+            .core-receipt-text strong { font-size: 14px; }
+            .core-receipt-text span { font-size: 12px; }
+
+            /* Pain Points */
+            .pain-section { padding: 40px 20px; }
+            .section-header { margin-bottom: 24px; }
+            .section-header h2 { font-size: 24px; line-height: 1.3; }
+            .section-header p { font-size: 14px; }
+            .pain-grid { grid-template-columns: 1fr; gap: 12px; }
+            .pain-card { padding: 20px; border-radius: 12px; }
+            .pain-emoji { font-size: 28px; margin-bottom: 10px; }
+            .pain-card h3 { font-size: 16px; }
+            .pain-card .problem, .pain-card .solution { font-size: 13px; }
+
+            /* Steps */
+            .how-section { padding: 40px 20px; }
+            .steps { flex-direction: column; gap: 0; align-items: center; }
+            .step { padding: 16px 20px; text-align: center; width: 100%; max-width: 320px; }
+            .step-number { width: 40px; height: 40px; font-size: 18px; }
+            .step h3 { font-size: 15px; margin-bottom: 4px; }
+            .step p { font-size: 13px; }
             .step-arrow { display: none; }
-            .feature-grid { grid-template-columns: 1fr; }
-            .safety-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-            .trust-inner { gap: 24px; }
-            .section-header h2 { font-size: 28px; }
+
+            /* Features */
+            .features-section { padding: 40px 20px; }
+            .feature-grid { grid-template-columns: 1fr; gap: 12px; }
+            .feature-card { padding: 20px; gap: 14px; border-radius: 12px; }
+            .feature-icon { width: 44px; height: 44px; min-width: 44px; border-radius: 10px; font-size: 20px; }
+            .feature-card h3 { font-size: 15px; }
+            .feature-card p { font-size: 13px; }
+
+            /* Dual Role */
+            .dual-role { padding: 40px 20px; }
+            .dual-role h2 { font-size: 24px; }
+            .dual-role > .dual-role-inner > p.dual-desc { font-size: 14px; margin-bottom: 28px; }
+            .dual-cards { grid-template-columns: 1fr; gap: 12px; }
+            .dual-switch { transform: rotate(90deg); padding: 4px 0; }
+            .dual-card { padding: 24px 20px; border-radius: 14px; }
+            .dual-card-icon { font-size: 36px; margin-bottom: 10px; }
+            .dual-card h3 { font-size: 17px; }
+            .dual-card p { font-size: 13px; }
+            .dual-bottom { padding: 14px 24px; }
+            .dual-bottom p { font-size: 16px; }
+            .dual-bottom small { font-size: 12px; }
+
+            /* Safety */
+            .safety-section { padding: 40px 20px; }
+            .safety-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .safety-card { padding: 20px 14px; border-radius: 12px; }
+            .safety-icon { font-size: 28px; margin-bottom: 10px; }
+            .safety-card h3 { font-size: 14px; margin-bottom: 6px; }
+            .safety-card p { font-size: 12px; line-height: 1.5; }
+
+            /* Fee */
+            .fee-section { padding: 40px 20px; }
+            .fee-table-wrap { border-radius: 12px; }
+            .fee-table th { padding: 12px 10px; font-size: 12px; }
+            .fee-table td { padding: 12px 10px; font-size: 13px; }
+            .fee-note { font-size: 12px; padding: 0 8px; }
+
+            /* CTA */
+            .cta-section { padding: 40px 20px; }
+            .cta-section h2 { font-size: 24px; }
+            .cta-section p { font-size: 14px; margin-bottom: 24px; }
+
+            /* Footer */
+            .footer { padding: 36px 20px 16px; }
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 20px 16px;
+            }
+            .footer-brand { grid-column: 1 / -1; }
+            .footer-brand h3 { font-size: 18px; }
+            .footer-brand p { font-size: 13px; }
+            .footer-col h4 { font-size: 14px; margin-bottom: 10px; }
+            .footer-col a { font-size: 13px; margin-bottom: 6px; }
+            .footer-bottom {
+                font-size: 11px;
+                line-height: 1.8;
+                text-align: center;
+                margin-top: 20px;
+                padding-top: 16px;
+                word-break: keep-all;
+                overflow-wrap: break-word;
+            }
         }
 
+        /* Responsive - Small Phone */
         @media (max-width: 480px) {
+            .hero h1 { font-size: 28px; }
+            .hero .subtitle { font-size: 14px; }
+            .hero-buttons { flex-direction: column; align-items: center; width: 100%; }
+            .hero-buttons .btn-primary,
+            .hero-buttons .btn-secondary { width: 100%; max-width: 280px; justify-content: center; }
+
+            .trust-inner { gap: 12px 8px; }
+            .trust-item { font-size: 12px; gap: 6px; }
+            .trust-icon { width: 28px; height: 28px; min-width: 28px; font-size: 13px; }
+
+            .section-header h2 { font-size: 22px; }
+
             .safety-grid { grid-template-columns: 1fr; }
-            .hero-buttons { flex-direction: column; align-items: center; }
+            .safety-card { padding: 20px; }
+
+            .fee-table th { padding: 10px 8px; font-size: 11px; }
+            .fee-table td { padding: 10px 8px; font-size: 12px; }
+
+            .cta-section h2 { font-size: 22px; }
+            .cta-section .btn-primary { width: 100%; max-width: 280px; justify-content: center; }
+
+            .footer-bottom { font-size: 10px; }
         }
 
         /* Animations */
@@ -502,18 +841,18 @@
                 <a href="#fee">费用</a>
                 <a href="privacy-policy.html">隐私政策</a>
                 <a href="terms-of-service.html">服务条款</a>
-                <a href="#download" class="nav-download">下载 App</a>
+                <a href="https://apps.apple.com/cn/app/%E6%8B%BE%E7%89%A9globepick/id6757971736" class="nav-download" target="_blank">下载 App</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero" id="home">
-        <div class="hero-badge">支付宝担保交易 &middot; 平台资金监管</div>
+        <div class="hero-badge">商品0溢价 &middot; 购物小票可查 &middot; 支付宝担保</div>
         <h1>全球好物，<span>一键帮带</span></h1>
-        <p class="subtitle">连接海外代购者与国内买家，支付宝担保交易，平台全程监管资金，让跨境购物安全、透明、省心。</p>
+        <p class="subtitle">人人都是消费者，人人也可以是代购者。每件商品当地实时价格，0溢价，购物小票可查——开创「可帮带经济」新模式。</p>
         <div class="hero-buttons">
-            <a href="https://apps.apple.com/app/id6740544107" class="btn-primary" id="download">
+            <a href="https://apps.apple.com/cn/app/%E6%8B%BE%E7%89%A9globepick/id6757971736" class="btn-primary" id="download">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
                 App Store 下载
             </a>
@@ -524,6 +863,14 @@
     <!-- Trust Bar -->
     <section class="trust-bar">
         <div class="trust-inner">
+            <div class="trust-item">
+                <div class="trust-icon">&#128176;</div>
+                <span>商品0溢价</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">&#129534;</div>
+                <span>购物小票可查</span>
+            </div>
             <div class="trust-item">
                 <div class="trust-icon">&#128274;</div>
                 <span>支付宝担保交易</span>
@@ -543,6 +890,45 @@
         </div>
     </section>
 
+    <!-- Core Value: 0溢价 -->
+    <section class="core-value">
+        <div class="core-value-inner">
+            <div class="core-value-badge">核心理念</div>
+            <h2>每件商品 <span class="highlight">0溢价</span>，价格真实可查</h2>
+            <p>传统代购溢价高达 30%-100%，你多花的每一分钱都是信息不对称的代价。在拾物GlobePick，每件商品都是当地实时价格，代购者必须上传购物小票，你可以看到真实的购买价格。平台只收取透明的代购费和技术服务费，绝不吃差价。</p>
+            <div class="core-compare fade-in">
+                <div class="compare-card compare-old">
+                    <div class="compare-label">传统代购</div>
+                    <ul class="compare-list">
+                        <li>&#10060; 溢价 30%-100%，信息严重不对称</li>
+                        <li>&#10060; 看不到购物小票，价格全凭代购说</li>
+                        <li>&#10060; 假货、跑路、货不对板频发</li>
+                        <li>&#10060; 只靠微信群、私聊，毫无保障</li>
+                        <li>&#10060; 只要比国内便宜就行，差价全吃</li>
+                    </ul>
+                </div>
+                <div class="compare-vs">VS</div>
+                <div class="compare-card compare-new">
+                    <div class="compare-label">拾物 GlobePick</div>
+                    <ul class="compare-list">
+                        <li>&#9989; 商品 0 溢价，当地实时价格</li>
+                        <li>&#9989; 购物小票必须上传，可查看</li>
+                        <li>&#9989; 费率公开透明，绝不吃差价</li>
+                        <li>&#9989; 只赚代购费 + 平台技术费</li>
+                        <li>&#9989; 每笔交易价格真实可追溯</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="core-receipt">
+                <div class="core-receipt-icon">&#129534;</div>
+                <div class="core-receipt-text">
+                    <strong>购物小票强制上传机制</strong>
+                    <span>代购者购买后必须上传购物小票，买家可随时查看商品的真实购买价格</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pain Points -->
     <section class="pain-section">
         <div class="section-inner">
@@ -553,40 +939,40 @@
             </div>
             <div class="pain-grid fade-in">
                 <div class="pain-card">
-                    <div class="pain-emoji">&#128530;</div>
-                    <h3>微信代购不靠谱</h3>
-                    <p class="problem">付了钱不发货、货不对版、被拉黑</p>
-                    <p class="solution">&#10003; 平台担保交易，确认收货才放款</p>
+                    <div class="pain-emoji">&#128176;</div>
+                    <h3>溢价 30%-100%</h3>
+                    <p class="problem">传统代购他说多少就多少，看不到小票，差价全吃了</p>
+                    <p class="solution">&#10003; 0溢价 + 购物小票必传，真实价格一目了然</p>
                 </div>
                 <div class="pain-card">
-                    <div class="pain-emoji">&#128176;</div>
-                    <h3>代购价格不透明</h3>
-                    <p class="problem">不知道代购费加了多少，吃了差价</p>
-                    <p class="solution">&#10003; 明确费率公示，购物小票可查</p>
+                    <div class="pain-emoji">&#128530;</div>
+                    <h3>假货、跑路、货不对板</h3>
+                    <p class="problem">微信代购付了钱不发货、发假货、被拉黑，维权无门</p>
+                    <p class="solution">&#10003; 支付宝担保交易，确认收货才放款，实名+人脸认证</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-emoji">&#128172;</div>
+                    <h3>帮带全靠微信群私聊</h3>
+                    <p class="problem">旅客顺路带货完全碎片化，只能靠朋友圈和群聊碰运气</p>
+                    <p class="solution">&#10003; 首个「可帮带经济」平台，需求精准匹配</p>
                 </div>
                 <div class="pain-card">
                     <div class="pain-emoji">&#128666;</div>
                     <h3>物流无法追踪</h3>
-                    <p class="problem">包裹寄了没寄、到哪了，全靠问</p>
+                    <p class="problem">包裹寄了没寄、到哪了，全靠问代购</p>
                     <p class="solution">&#10003; 接入快递100，物流状态实时查</p>
                 </div>
                 <div class="pain-card">
                     <div class="pain-emoji">&#128587;</div>
                     <h3>回国行李箱空着</h3>
-                    <p class="problem">留学生回国箱子有空间，没法变现</p>
-                    <p class="solution">&#10003; 发布帮带服务，顺路赚零花钱</p>
+                    <p class="problem">留学生/旅客回国箱子有空间，却没法变现</p>
+                    <p class="solution">&#10003; 发布帮带服务，顺路赚取报酬</p>
                 </div>
                 <div class="pain-card">
                     <div class="pain-emoji">&#128269;</div>
                     <h3>想买的东西国内没有</h3>
-                    <p class="problem">限定款、当地特产，找不到靠谱代购</p>
-                    <p class="solution">&#10003; 发布代购需求，全球帮你找</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-emoji">&#128694;</div>
-                    <h3>闲置物品难处理</h3>
-                    <p class="problem">搬家/毕业，东西扔了可惜卖了麻烦</p>
-                    <p class="solution">&#10003; 市集功能，同城交易快速出手</p>
+                    <p class="problem">限定款、当地特产，找不到靠谱代购渠道</p>
+                    <p class="solution">&#10003; 发布代购需求，全球帮你找到买到</p>
                 </div>
             </div>
         </div>
@@ -633,21 +1019,21 @@
         <div class="section-inner">
             <div class="section-header">
                 <div class="section-tag">核心功能</div>
-                <h2>不只是代购，更是全球生活方式</h2>
+                <h2>不只是代购App，而是「可帮带经济」平台</h2>
             </div>
             <div class="feature-grid fade-in">
                 <div class="feature-card">
                     <div class="feature-icon icon-red">&#128722;</div>
                     <div>
                         <h3>跨境代购</h3>
-                        <p>发布代购需求，全球代购者接单帮你买。支持日本、韩国、欧美等热门目的地。</p>
+                        <p>发布代购需求，全球代购者接单帮你买。商品0溢价，购物小票必传，价格真实透明。</p>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon icon-blue">&#9992;&#65039;</div>
                     <div>
-                        <h3>可帮带服务</h3>
-                        <p>出国旅行/回国有空余行李空间？发布帮带服务，顺路帮别人带东西赚取报酬。</p>
+                        <h3>可帮带经济</h3>
+                        <p>全球首创——将旅客行李箱里的闲置空间平台化。出国旅行或回国顺路帮带，赚取报酬，告别微信群碰运气。</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -682,6 +1068,34 @@
         </div>
     </section>
 
+    <!-- Dual Role: 人人参与 -->
+    <section class="dual-role">
+        <div class="dual-role-inner">
+            <div class="section-tag">人人参与</div>
+            <h2>今天买好物，明天赚报酬</h2>
+            <p class="dual-desc">在拾物GlobePick，没有固定的买家和卖家。人人都是消费者，人人也可以是代购者和帮带者。</p>
+            <div class="dual-cards fade-in">
+                <div class="dual-card dual-card-buy">
+                    <div class="dual-card-icon">&#128717;</div>
+                    <h3>我想买</h3>
+                    <p>发布代购需求，全球帮你找到好物，0溢价购买，购物小票可查</p>
+                    <div class="dual-tag">消费者身份</div>
+                </div>
+                <div class="dual-switch">&#8644;</div>
+                <div class="dual-card dual-card-earn">
+                    <div class="dual-card-icon">&#127757;</div>
+                    <h3>我能带</h3>
+                    <p>出国旅行或回国时，顺路帮别人代购或帮带物品，赚取报酬</p>
+                    <div class="dual-tag">代购者 / 帮带者身份</div>
+                </div>
+            </div>
+            <div class="dual-bottom">
+                <p>说不定，<span>下一次出发的就是你</span></p>
+                <small>每一位用户都可以随时切换身份，既能享受全球好物，也能顺路赚钱</small>
+            </div>
+        </div>
+    </section>
+
     <!-- Safety -->
     <section class="safety-section" id="safety">
         <div class="section-inner">
@@ -703,8 +1117,8 @@
                 </div>
                 <div class="safety-card">
                     <div class="safety-icon">&#128433;</div>
-                    <h3>购物凭证</h3>
-                    <p>代购者需上传购物小票，价格透明可查</p>
+                    <h3>0溢价 + 小票可查</h3>
+                    <p>商品按当地实时价格，代购者必须上传购物小票，拒绝吃差价</p>
                 </div>
                 <div class="safety-card">
                     <div class="safety-icon">&#128187;</div>
@@ -747,9 +1161,9 @@
 
     <!-- CTA -->
     <section class="cta-section">
-        <h2>开始你的全球购物之旅</h2>
-        <p>已有来自多个国家的用户在使用拾物GlobePick</p>
-        <a href="https://apps.apple.com/app/id6740544107" class="btn-primary">
+        <h2>下一个出发的，也许就是你</h2>
+        <p>无论你是想买全球好物，还是出行顺路赚报酬——拾物GlobePick 让每个人都能参与</p>
+        <a href="https://apps.apple.com/cn/app/%E6%8B%BE%E7%89%A9globepick/id6757971736" class="btn-primary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             免费下载 App
         </a>
@@ -778,7 +1192,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 成都市拾物世界互联网信息服务有限责任公司 &middot; 统一社会信用代码：91510106MAK49YTM39</p>
+            <p>&copy; 2026 成都市拾物世界互联网信息服务有限责任公司</p>
+            <p>统一社会信用代码：91510106MAK49YTM39</p>
             <p>四川省成都市金牛区一品天下大街259号附90号</p>
             <p>
                 <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2026004608号-1</a>

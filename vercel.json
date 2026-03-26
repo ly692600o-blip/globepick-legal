@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/notes/:noteId",
+      "destination": "https://api.globepick.cn/share/notes/:noteId"
+    },
+    {
       "source": "/app/",
       "destination": "https://api.globepick.cn/app/"
     },
